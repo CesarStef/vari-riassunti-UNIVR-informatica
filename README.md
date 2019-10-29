@@ -19,4 +19,4 @@ I contenuti di questa repository possono essere incompleti e/o antiquati.
 
 # Contributori
 
-Si ringrazia <a="https://github.com/matteomeneghetti">Matteo Meneghetti</a> per l'aver contribuito alla relazione di Ing. del Software e Federico Boz per aver condiviso il proprio elaborato di Latex.
+Si ringrazia [Matteo Meneghetti](https://github.com/matteomeneghetti) per l'aver contribuito alla relazione di Ing. del Software e Federico Boz per aver condiviso il proprio elaborato di Latex.
