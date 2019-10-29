@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\title{Reti}
+\author{cattonarstefano95 }
+\date{Settembre 2019}
+
+\begin{document}
+
+\maketitle
+    \section{Nullable}
+        \subsection*{Definizione di Nullable(A)}
+        $Nullable(A)= vero se esiste una qualsiasi produzione A \to^*\epsilon$
+    \section{First}
+        \subsection*{Definizione di First(A)}
+            $First(A)=c \in \sum | \exists \beta \in{(\sum \cup N)^*} t.c.\: A \implies^* \epsilon$ 
+        \subsection*{Versione in italiano}
+            Sono First di A tutti i token all'inzio di tutto quello che può essere derivabile da A.
+            
+            Esempio:\newline
+            O:A \to bBc \newline
+            1:A \to B \newline
+            2:B \to f \newline
+            
+            Sono first di A{b,f}\newline
+            b dalla produzione 0\newline
+            f dalla produzione 1, perché se il first è un non terminale bisogna guardare tutti i suoi first.
+    \section{Follow}
+        \subsection*{Definizione di Follow(A)}
+            $Follow(A)= c \in \sum | \exists{a,b \in (\sum \cup N)^*}t.c \: X\to^*aAbB $
+        \subsection*{Traduzione in una lingua accettabile}
+            Sono $Follow$ di A tutti i non terminali che seguono A in \textbf{TUTTE} le produzioni
+            
+        \subsection{CASI DIVERSI}
+            Se A è seguita da B allora i $First$di B sono $Follow$ di A \newline
+            $First(B) \subseteq Follow(A)$\newline\newline
+            Se B è $Nullable$ allora i $Follow$ del Non terminale da cui si è derivata la produzione sono parte dei $Follow$ di A
+            Se $Nullable(B)$ allora $Follow(S) \subseteq Follow(A)$
+            Se il $Follow$ di A in una produzione è $\epsilon$ allora ci si riconduce al caso precedente\newline
+            Se $\epsilon$ allora $Follow(S) \subseteq Follow(A)$\newline
+            IMPORTANTE:\$ è sempre parte del follow set di S
+    
+    \section{Look-Ahed}
+        \subsection*{Definizione}
+
+        Il Look-Ahead Set per una produzione $X\to A$ è:
+        \newline
+        $la(X\to A)=FIRST(A)\cup $ $Follow(X)$ se $Nullable(A)$ altrimenti  \textbf{SOLO} $FIRST(A)$
+        
+            
+    \section{LL1}
+    
+    Work In progress... forse
+        
+        
+
+\end{document}
